@@ -46,29 +46,30 @@ function filter(type){
 	if(type == "all"){
 		// Show all
 		$(".all").css("display", "initial");
+		
 	}else if(type == "oil"){
-		// Show oil
-		$(".oil").css("display", "initial");
-
 		// Hide non-oil
 		$(".pencil").css("display", "none");
 		$(".pen").css("display", "none");
 
-	}else if(type == "pencil"){
-		// Show pencil
-		$(".pencil").css("display", "initial");
+		// Show oil
+		$(".oil").css("display", "initial");
 
+	}else if(type == "pencil"){
 		// Hide non-pencil
 		$(".oil").css("display", "none");
 		$(".pen").css("display", "none");
 
-	}else if(type == "pen"){
-		// Show pen
-		$(".pen").css("display", "initial");
+		// Show pencil
+		$(".pencil").css("display", "initial");
 
+	}else if(type == "pen"){
 		// Hide non-pen
 		$(".oil").css("display", "none");
 		$(".pencil").css("display", "none");
+
+		// Show pen
+		$(".pen").css("display", "initial");
 
 	}else{
 		console.log("This type does not exist!");
