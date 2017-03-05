@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Drawings</title>
+
+<!--Makes the website responsive on mobile-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--References-->
+<link href="https://fonts.googleapis.com/css?family=Petit+Formal+Script" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Mada" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="drawings.css">
+<link rel="stylesheet" type="text/css" href="../style.css">
+
+</head>
+<body>
+
+<!--Name of Website (clickable)-->
+<a href="../index.html" style="text-decoration: none;">
+	<h1 class="webname">Gerry's Artwork</h1>
+</a>
+
+<!--Navigation Bar-->
+<ul class="topnav" id="topNav">
+	<li><a href="../index.html">Home</a></li>
+	<li><a class="active" href="#">Drawings</a></li>
+	<li><a href="../aboutPage/about.html">About</a></li>
+	<li class="menu">
+		<!--Hamburger menu icon appears when screen gets smaller-->
+		<a href="javascript:void(0);" onclick="menuClicked()">&#9776;</a>
+	</li>
+</ul>
+
+<!--Filter-->
+<div class="responsive">
+	<div class="img">
+		<div class="title">
+			<h1>Filter</h1>
+		</div>
+		<div class="radios">
+			<label><input type="radio" onclick="getType()" name="type" value="all" checked> All</label><br>
+    	<label><input type="radio" onclick="getType()" name="type" value="oil"> Oil</label><br>
+    	<label><input type="radio" onclick="getType()" name="type" value="pencil"> Pencil</label><br>
+    	<label><input type="radio" onclick="getType()" name="type" value="pen"> Pen</label><br>
+    </div>
+	</div>
+</div>
+
+
+<!--Drawings-->
+<div class="oil all">
+	<div class="responsive">
+		<div class="img">
+			<div class="title">
+				<h1>Kitty</h1>
+			</div>
+			<a onclick="" href="#">
+				<img src="thumbnails/kitty.jpg" alt="Kitty" width="230" height="230">
+			</a>
+			<div class="description">
+				<p>Oil</p>
+				<p>Xcm &times; Ycm</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="../menu.js"></script>
+</body>
+</html>
