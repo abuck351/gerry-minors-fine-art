@@ -3,7 +3,6 @@
 	background-color: rgba(50,50,50,0.8);
 	border-radius: 10px;
 	box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 8px 22px 0 rgba(0, 0, 0, 0.25);
-
 	text-align: center;
 	padding-top: 10px;
 }
@@ -20,6 +19,12 @@
 	border-color: rgb(100,100,100);
 	border-width: 7px;
 	box-shadow: 0 10px 14px 0 rgba(0, 0, 0, 0.3), 0 12px 26px 0 rgba(0, 0, 0, 0.25);
+	transition: 0.5s;
+}
+
+.img img:hover{
+	border-color: rgb(120,120,120);
+	box-shadow: 0 11px 15px 0 rgba(0, 0, 0, 0.3), 0 13px 27px 0 rgba(0, 0, 0, 0.25);
 }
 
 .title{
@@ -63,4 +68,66 @@
 	.responsive{
 		width: 100%;
 	}
+}
+
+
+/*Picture Viewer*/
+.overlay{
+	/*Height and width change how the overlay is revealed*/
+	height: 0%;
+	width: 100%;
+	position: fixed; /*Stay in place*/
+	z-index: 1; /*Sit on top because it is an overlay*/
+	left: 0;
+	top: 0;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0,0.8);
+	overflow-x: hidden; /*No horizontal scrolling*/
+	transition: 0.2s;
+}
+
+#picViewer .overlay-content{
+	text-align: center; /*Center the image*/
+	margin: 30px;
+	margin-top: 100px;
+}
+
+#picViewer .overlay-content img{
+	/*So the image scales properly*/
+	max-width: 100%;
+	height: auto;
+	box-shadow: 0 10px 14px 0 rgba(0, 0, 0, 0.3), 0 12px 26px 0 rgba(0, 0, 0, 0.25);
+  	border-radius: 10px;
+}
+
+.overlay #closeButton{
+	text-decoration: none;
+	color: white;
+	font-size: 70px;
+	position: absolute;
+	top: 20px;
+	right: 45px;
+	transition: 0.2s;
+}
+
+.overlay #closeButton:hover{
+	color: rgb(200,200,200);
+}
+
+
+/*Filter*/
+.all{
+	display: initial;
+}
+
+.oil{
+
+}
+
+.pencil{
+
+}
+
+.pen{
+
 }
