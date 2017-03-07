@@ -37,17 +37,19 @@
 }
 
 .description{
-	padding: 15px;
+	padding: 10px;
 	text-align: center;
 	color: white;
 	font-family: 'Open Sans', sans-serif;
 }
 
 .radios{
-	padding: 15px;
+	padding-bottom: 10px;
 	text-align: left;
 	color: white;
 	font-family: 'Open Sans', sans-serif;
+	display: inline-block;
+	font-size: 20px;
 }
 
 *{
