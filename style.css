@@ -47,7 +47,7 @@ ul.topnav li{
 
 ul.topnav li a{
 	font-size: 17px;
-	font-family: 'Mada', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 
 	display: inline-block; /*Links are side by side*/
 	color: rgb(200,200,200); /*A whitish color*/
