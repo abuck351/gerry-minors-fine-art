@@ -27,7 +27,7 @@ h1.webname{
 ul.topnav{
 	list-style-type: none; /*No bullet points*/
 	margin: 0;
-	padding: 0;
+	padding: 5px;
 	overflow: hidden; /*No scroll bars*/
 	background-color: rgba(50,50,50,0.8); /*A dark grey*/
 	/*Border radii*/
@@ -54,18 +54,20 @@ ul.topnav li a{
 	text-align: center;
 	padding: 14px 16px; /*Top and bottom paddings are 14px.  Right and left paddings are 16px*/
 	text-decoration: none;
-	transition: 0.3s; /*The transition when returning to the normal state*/
+	margin: 2px;
+	transition: 0.4s; /*The transition when returning to the normal state*/
 	/*Make the links pills*/
 	border-radius: 10px;
-	margin: 2px;
-	outline: none;
+	border: double;
+	border-width: 5px;
+	border-color: rgba(100,100,100,0);
 }
 
 ul.topnav li a:hover{
 	/*When the user hovers over a link*/
 	background-color: rgba(130,130,130,0.5); /*Change the color of the link to be lighter*/
-	transition: 0.7s;
 	box-shadow: 0 10px 14px 0 rgba(0, 0, 0, 0.3), 0 12px 26px 0 rgba(0, 0, 0, 0.25);
+	border-color: rgb(150,150,150);
 }
 
 ul.topnav li.menu{
