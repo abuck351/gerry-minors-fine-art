@@ -9,6 +9,9 @@ function openViewer(img){
 	var body = document.getElementById("pageBody");
 	body.style.webkitFilter = "blur(" + blurAmount + "px)";
 	body.style.transition = "all " + tranSpeed + "s";
+
+	// Prevent scrolling underneath the overlay
+	document.getElementsByTagName("BODY")[0].style.overflow = "hidden";
 }
 
 function closeViewer(){
@@ -16,6 +19,9 @@ function closeViewer(){
 
 	//Remove the blur effect 
 	document.getElementById("pageBody").style.webkitFilter = "none";
+
+	// Reenable scrolling
+	document.getElementsByTagName("BODY")[0].style.overflow = "initial";
 }
 
 var type = "all"; // The default type of drawing
