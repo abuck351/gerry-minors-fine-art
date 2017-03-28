@@ -47,7 +47,7 @@ function filter(type){
 	var all = document.getElementsByClassName("all");
 	var oil = document.getElementsByClassName("oil");
 	var pencil = document.getElementsByClassName("pencil");
-	var pen = document.getElementsByClassName("pen");
+	var penInk = document.getElementsByClassName("penInk");
 
 	if(type == "all"){
 		// Show all
@@ -56,7 +56,7 @@ function filter(type){
 	}else if(type == "oil"){
 		// Hide non-oil
 		$(".pencil").css("display", "none");
-		$(".pen").css("display", "none");
+		$(".penInk").css("display", "none");
 
 		// Show oil
 		$(".oil").css("display", "initial");
@@ -64,18 +64,18 @@ function filter(type){
 	}else if(type == "pencil"){
 		// Hide non-pencil
 		$(".oil").css("display", "none");
-		$(".pen").css("display", "none");
+		$(".penInk").css("display", "none");
 
 		// Show pencil
 		$(".pencil").css("display", "initial");
 
-	}else if(type == "pen"){
+	}else if(type == "penInk"){
 		// Hide non-pen
 		$(".oil").css("display", "none");
 		$(".pencil").css("display", "none");
 
 		// Show pen
-		$(".pen").css("display", "initial");
+		$(".penInk").css("display", "initial");
 
 	}else{
 		console.log("This type does not exist!");
