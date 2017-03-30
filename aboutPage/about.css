@@ -11,6 +11,13 @@
 .panel h1{
 	text-align: center;
 	font-family: 'Petit Formal Script', cursive;
+	margin-bottom: 75px;
+}
+
+.panel h3{
+	text-align: center;
+	font-family: 'Petit Formal Script', cursive;
+	font-size: 24px;
 }
 
 .panel p{
