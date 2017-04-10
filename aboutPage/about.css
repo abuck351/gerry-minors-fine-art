@@ -18,12 +18,18 @@
 	text-align: center;
 	font-family: 'Petit Formal Script', cursive;
 	font-size: 24px;
+	margin: 0;
 }
 
 .panel p{
 	text-indent: 50px;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 20px;
+	margin: 0;
+}
+
+.panel .bioSection{
+	margin-top: 50px;
 }
 
 @media only screen and (max-width: 500px){
