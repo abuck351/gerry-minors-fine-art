@@ -6,9 +6,11 @@ function openViewer(img){
 	document.getElementById("picViewer").style.height = "100%"; // Open the overlay
 
 	// Add the blur effect 
+	/*
 	var body = document.getElementById("pageBody");
 	body.style.webkitFilter = "blur(" + blurAmount + "px)";
 	body.style.transition = "all " + tranSpeed + "s";
+	*/
 
 	// Prevent scrolling underneath the overlay
 	document.getElementsByTagName("BODY")[0].style.overflow = "hidden";

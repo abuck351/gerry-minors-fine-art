@@ -1,0 +1,110 @@
+.panel{
+	color: white;
+	background-color: rgb(50,50,50);
+	background-color: rgba(50,50,50,0.9);
+	padding: 10px 20px;
+	margin: 20px 10px;
+	border-radius: 10px;
+	box-shadow: 0 10px 14px 0 rgba(0, 0, 0, 0.3), 0 12px 26px 0 rgba(0, 0, 0, 0.25);
+}
+
+.panel h1{
+	text-align: center;
+	font-family: 'Petit Formal Script', cursive;
+	margin-bottom: 75px;
+}
+
+.panel h3{
+	text-align: center;
+	font-family: 'Petit Formal Script', cursive;
+	font-size: 24px;
+	margin: 0;
+}
+
+.panel p{
+	text-indent: 50px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 20px;
+	margin: 10px;
+}
+
+.panel input{
+	margin-top: 20px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 20px;
+	background-color: rgb(70,70,70);
+	box-shadow: 0 10px 14px 0 rgba(0, 0, 0, 0.3), 0 12px 26px 0 rgba(0, 0, 0, 0.25);
+	border: none;
+	border-radius: 10px;
+	padding: 10px;
+	width: 300px;
+	color: white;
+}
+
+.panel textarea{
+	resize: none;
+	display: flex;
+	width: 100%;
+	box-sizing: border-box;
+	margin-top: 20px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 20px;
+	background-color: rgb(70,70,70);
+	color: white;
+	padding: 10px;
+	border-radius: 10px;
+	border: none;
+	box-shadow: 0 10px 14px 0 rgba(0, 0, 0, 0.3), 0 12px 26px 0 rgba(0, 0, 0, 0.25);
+}
+
+.panel button{
+	margin-top: 20px;
+}
+
+.panel button{
+	background-color: rgba(70,70,70,0.8); /*Semi-transparent grey*/
+	color: white; /*White text*/
+	padding: 10px 24px; /*Top/bot ; Right/left*/
+	cursor: pointer;
+	float: left; /*Put the buttons right next to each other*/
+	transition: 0.3s;
+	font-size: 30px;
+	float: none; /*This keeps the buttons centered*/
+	margin-top: 20px;
+	border: double;
+	border-color: rgba(100,100,100, 0);
+	border-width: 5px;
+	border-radius: 10px;
+	box-shadow: 0 10px 14px 0 rgba(0, 0, 0, 0.3), 0 12px 26px 0 rgba(0, 0, 0, 0.25);
+}
+
+.panel button:hover{
+	/*Change the background color when hovering over button*/
+	background-color: rgba(120,120,120,0.6);
+	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.3), 0 14px 28px 0 rgba(0, 0, 0, 0.25);
+	border-color: rgb(150,150,150);
+}
+
+@media only screen and (max-width: 500px){
+	.panel p{
+		font-size: 18px;
+	}
+	.panel{
+		margin: 10px 5px;
+	}
+	.panel input{
+		display: flex;
+		box-sizing: border-box;
+		width: 100%;
+		font-size: 12px;
+	}
+	.panel textarea{
+		font-size: 12px;
+	}
+}
+
+@media only screen and (max-width: 320px){
+	.panel p{
+		font-size: 16px;
+	}
+}
