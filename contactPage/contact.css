@@ -34,18 +34,20 @@
 	font-size: 20px;
 	background-color: rgba(70,70,70,0.6);
 	box-shadow: 0 10px 14px 0 rgba(0, 0, 0, 0.3), 0 12px 26px 0 rgba(0, 0, 0, 0.25);
-	border: none;
-	border-radius: 10px;
 	padding: 10px;
 	width: 300px;
 	color: white;
+	border: double;
+	border-color: rgb(100,100,100);
+	border-width: 7px;
+	border-radius: 10px;
+	transition: 0.5s;
 }
 
 .panel input:focus{
 	background-color: rgba(80,80,80,0.6);
+	border-color: rgb(120,120,120);
 	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.3), 0 14px 28px 0 rgba(0, 0, 0, 0.25);
-	border-style: double;
-	border-color: rgb(150,150,150);
 	outline: none;
 }
 
@@ -60,16 +62,18 @@
 	background-color: rgba(70,70,70,0.6);
 	color: white;
 	padding: 10px;
-	border-radius: 10px;
-	border: none;
 	box-shadow: 0 10px 14px 0 rgba(0, 0, 0, 0.3), 0 12px 26px 0 rgba(0, 0, 0, 0.25);
+	border: double;
+	border-color: rgb(100,100,100);
+	border-width: 7px;
+	border-radius: 10px;
+	transition: 0.5s;
 }
 
 .panel textarea:focus{
 	background-color: rgba(80,80,80,0.6);
+	border-color: rgb(120,120,120);
 	box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.3), 0 14px 28px 0 rgba(0, 0, 0, 0.25);
-	border-style: double;
-	border-color: rgb(150,150,150);
 	outline: none;
 }
 
@@ -81,6 +85,7 @@
 	float: left; /*Put the buttons right next to each other*/
 	transition: 0.3s;
 	font-size: 24px;
+	font-family: 'Petit Formal Script', cursive;
 	float: none; /*This keeps the buttons centered*/
 	margin-top: 20px;
 	border: double;
