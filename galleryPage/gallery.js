@@ -45,12 +45,6 @@ function getType(){
 }
 
 function filter(type){
-	// Get all of the images with these class names
-	var all = document.getElementsByClassName("all");
-	var oil = document.getElementsByClassName("oil");
-	var pencil = document.getElementsByClassName("pencil");
-	var penInk = document.getElementsByClassName("mixed");
-
 	if(type == "all"){
 		// Show all
 		$(".all").css("display", "initial");
@@ -58,7 +52,8 @@ function filter(type){
 	}else if(type == "oil"){
 		// Hide non-oil
 		$(".pencil").css("display", "none");
-		$(".mixed").css("display", "none");
+		$(".penInk").css("display", "none");
+		$(".other").css("display", "none");
 
 		// Show oil
 		$(".oil").css("display", "initial");
@@ -66,18 +61,29 @@ function filter(type){
 	}else if(type == "pencil"){
 		// Hide non-pencil
 		$(".oil").css("display", "none");
-		$(".mixed").css("display", "none");
+		$(".penInk").css("display", "none");
+		$(".other").css("display", "none");
 
 		// Show pencil
 		$(".pencil").css("display", "initial");
 
-	}else if(type == "mixed"){
-		// Hide non-mixed
+	}else if(type == "penInk"){
+		// Hide non-penInk
 		$(".oil").css("display", "none");
 		$(".pencil").css("display", "none");
+		$(".other").css("display", "none");
 
 		// Show mixed
-		$(".mixed").css("display", "initial");
+		$(".penInk").css("display", "initial");
+
+	}else if(type == "other"){
+		// Hide non-other
+		$(".oil").css("display", "none");
+		$(".pencil").css("display", "none");
+		$(".penInk").css("display", "none");
+
+		// Show other
+		$(".other").css("display", "initial");
 
 	}else{
 		console.log("This type does not exist!");
