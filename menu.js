@@ -2,7 +2,7 @@
 function menuClicked(){
 	var nav = document.getElementById("topNav");
 	if(nav.className === "topnav"){
-		// If the menu is closed, close the menu
+		// If the menu is closed, open the menu
 		nav.className += " responsive"; // Do NOT forget the space
 	}else{
 		// If the menu is open, close the menu

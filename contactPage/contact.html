@@ -10,35 +10,35 @@
 <!--References-->
 <link href="https://fonts.googleapis.com/css?family=Petit+Formal+Script" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="../style.css">
 <link rel="stylesheet" type="text/css" href="contact.css">
 
 </head>
 <body>
 
-<!--Name of Website (clickable)-->
-<a href="../index.html" style="text-decoration: none;">
-	<h1 class="webname">Gerry Minor's Fine Art</h1>
-</a>
-
 <!--Navigation Bar-->
 <ul class="topnav" id="topNav">
-	<li><a href="../index.html">Home</a></li>
-	<li><a href="../galleryPage/gallery.html">Gallery</a></li>
-	<li><a href="../aboutPage/about.html">About</a></li>
-	<li><a class="active" href="#">Contact</a></li>
+	<!--Name of Website (clickable)-->
+	<a href="../index.html" style="text-decoration: none;">
+		<h1 class="webname">Gerry Minor's Fine Art</h1>
+	</a>
 	<li class="menu">
 		<!--Hamburger menu icon appears when screen gets smaller-->
 		<a href="javascript:void(0);" onclick="menuClicked()">&#9776;</a>
 	</li>
+	<li><a href="../index.html">Home</a></li>
+	<li><a href="../galleryPage/gallery.html">Gallery</a></li>
+	<li><a href="../aboutPage/about.html">About</a></li>
+	<li><a class="active" href="#">Contact</a></li>
 </ul>
 
 <div class="panel">
 	<h3>Send me an email</h3>
 	<input id="subject" placeholder="Subject">
 	<br>
-	<textarea id="message" placeholder="Write your message here" rows="10"></textarea>
-	<button id="send" onclick="send()">Send</button>
+	<textarea id="message" placeholder="Write your message here" rows="12"></textarea>
+	<button class="fa fa-paper-plane" id="send" title="Send" onclick="send()"></button>
 </div>
 
 <script type="text/javascript" src="../menu.js"></script>

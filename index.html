@@ -17,21 +17,20 @@
 </head>
 <body>
 
-<!--Name of Website (clickable)-->
-<a href="#" style="text-decoration: none;">
-	<h1 class="webname">Gerry Minor's Fine Art</h1>
-</a>
-
 <!--Navigation Bar-->
 <ul class="topnav" id="topNav">
+	<!--Name of Website (clickable)-->
+	<a href="#" style="text-decoration: none;">
+		<h1 class="webname">Gerry Minor's Fine Art</h1>
+	</a>
+	<li class="menu">
+		<!--Hamburger menu icon appears when screen gets smaller-->
+		<a id="menuButton" href="javascript:void(0);" onclick="menuClicked()">&#9776;</a>
+	</li>
 	<li><a class="active" href="#">Home</a></li>
 	<li><a href="galleryPage/gallery.html">Gallery</a></li>
 	<li><a href="aboutPage/about.html">About</a></li>
 	<li><a href="contactPage/contact.html">Contact</a></li>
-	<li class="menu">
-		<!--Hamburger menu icon appears when screen gets smaller-->
-		<a href="javascript:void(0);" onclick="menuClicked()">&#9776;</a>
-	</li>
 </ul>
 
 <!--Slideshow-->

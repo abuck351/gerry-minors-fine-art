@@ -32,265 +32,266 @@
 
 
 <div id="pageBody">
-<!--Name of Website (clickable)-->
-<a href="../index.html" style="text-decoration: none;">
-	<h1 class="webname">Gerry Minor's Fine Art</h1>
-</a>
-
 <!--Navigation Bar-->
 <ul class="topnav" id="topNav">
-	<li><a href="../index.html">Home</a></li>
-	<li><a class="active" href="#">Gallery</a></li>
-	<li><a href="../aboutPage/about.html">About</a></li>
-	<li><a href="../contactPage/contact.html">Contact</a></li>
+	<!--Name of Website (clickable)-->
+	<a href="../index.html" style="text-decoration: none;">
+		<h1 class="webname">Gerry Minor's Fine Art</h1>
+	</a>
 	<li class="menu">
 		<!--Hamburger menu icon appears when screen gets smaller-->
 		<a href="javascript:void(0);" onclick="menuClicked()">&#9776;</a>
 	</li>
+	<li><a href="../index.html">Home</a></li>
+	<li><a class="active" href="#">Gallery</a></li>
+	<li><a href="../aboutPage/about.html">About</a></li>
+	<li><a href="../contactPage/contact.html">Contact</a></li>
 </ul>
 
 <!--Filter-->
-<div class="responsive">
-	<div class="panel">
-		<div class="title" style="font-size: 35px">
-			<p>Filter</p>
+<div class="galleryBody">
+	<div class="responsive">
+		<div class="panel">
+			<div class="title" style="font-size: 35px">
+				<p>Filter</p>
+			</div>
+			<div class="radios">
+			<label><input type="radio" onclick="getType()" name="type" value="all" checked> All</label><br>
+	    	<label><input type="radio" onclick="getType()" name="type" value="oil"> Oil</label><br>
+	    	<label><input type="radio" onclick="getType()" name="type" value="pencil"> Pencil</label><br>
+	    	<label><input type="radio" onclick="getType()" name="type" value="penInk"> Pen & Ink</label><br>
+	    	<label><input type="radio" onclick="getType()" name="type" value="other"> Other</label><br>
+	    </div>
 		</div>
-		<div class="radios">
-		<label><input type="radio" onclick="getType()" name="type" value="all" checked> All</label><br>
-    	<label><input type="radio" onclick="getType()" name="type" value="oil"> Oil</label><br>
-    	<label><input type="radio" onclick="getType()" name="type" value="pencil"> Pencil</label><br>
-    	<label><input type="radio" onclick="getType()" name="type" value="penInk"> Pen & Ink</label><br>
-    	<label><input type="radio" onclick="getType()" name="type" value="other"> Other</label><br>
-    </div>
 	</div>
-</div>
 
-<!--DRAWINGS-->
-<div class="oil all">
-	<div class="responsive">
-		<div class="panel">
-			<div class="title">
-				<p>Kitty in Trouble</p>
-			</div>
-			<a title="Click to view" onclick="openViewer('pictures/kittyInTrouble.jpg')">
-				<img src="thumbnails/kittyInTrouble_t.jpg" alt="Kitty in Trouble" width="230" height="230">
-			</a>
-			<div class="description">
-				<p>Oil</p>
-				<p>16" &times; 20"</p>
-			</div>
-		</div>
-	</div>
-</div>
-<div class="oil all">
-	<div class="responsive">
-		<div class="panel">
-			<div class="title">
-				<p>Romeo and Juliet</p>
-			</div>
-			<a title="Click to view" onclick="openViewer('pictures/romeoAndJuliet.jpg')">
-				<img src="thumbnails/romeoAndJuliet_t.jpg" alt="Romeo and Juliet" width="230" height="230">
-			</a>
-			<div class="description">
-				<p>Oil</p>
-				<p>18" &times; 24"</p>
+	<!--DRAWINGS-->
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Kitty in Trouble</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('pictures/kittyInTrouble.jpg')">
+					<img src="thumbnails/kittyInTrouble_t.jpg" alt="Kitty in Trouble" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>16" &times; 20"</p>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
-<div class="pencil all">
-	<div class="responsive">
-		<div class="panel">
-			<div class="title">
-				<p>A Good Lesson</p>
-			</div>
-			<a title="Click to view" onclick="openViewer('pictures/aGoodLesson.jpg')">
-				<img src="thumbnails/aGoodLesson_t.jpg" alt="A Good Lesson" width="230" height="230">
-			</a>
-			<div class="description">
-				<p>Pencil</p>
-				<p>10.5" &times; 13.5"</p>
-			</div>
-		</div>
-	</div>
-</div>
-<div class="oil all">
-	<div class="responsive">
-		<div class="panel">
-			<div class="title">
-				<p>Constitution</p>
-			</div>
-			<a title="Click to view" onclick="openViewer('pictures/constitution.jpg')">
-				<img src="thumbnails/constitution_t.jpg" alt="Constitution" width="230" height="230">
-			</a>
-			<div class="description">
-				<p>Oil</p>
-				<p>22" &times; 28"</p>
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Romeo and Juliet</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('pictures/romeoAndJuliet.jpg')">
+					<img src="thumbnails/romeoAndJuliet_t.jpg" alt="Romeo and Juliet" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>18" &times; 24"</p>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
-<div class="oil all">
-	<div class="responsive">
-		<div class="panel">
-			<div class="title">
-				<p>Happy Feet</p>
-			</div>
-			<a title="Click to view" onclick="openViewer('pictures/happyFeet.jpg')">
-				<img src="thumbnails/happyFeet_t.jpg" alt="Happy Feet" width="230" height="230">
-			</a>
-			<div class="description">
-				<p>Oil</p>
-				<p>18" &times; 24"</p>
-			</div>
-		</div>
-	</div>
-</div>
-<div class="oil all">
-	<div class="responsive">
-		<div class="panel">
-			<div class="title">
-				<p>Meet My Main Squeeze</p>
-			</div>
-			<a title="Click to view" onclick="openViewer('pictures/meetMyMainSqueeze.jpg')">
-				<img src="thumbnails/meetMyMainSqueeze_t.jpg" alt="Meet My Main Squeeze" width="230" height="230">
-			</a>
-			<div class="description">
-				<p>Oil</p>
-				<p>18" &times; 24"</p>
+	<div class="pencil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>A Good Lesson</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('pictures/aGoodLesson.jpg')">
+					<img src="thumbnails/aGoodLesson_t.jpg" alt="A Good Lesson" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Pencil</p>
+					<p>10.5" &times; 13.5"</p>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
-<div class="penInk all">
-	<div class="responsive">
-		<div class="panel">
-			<div class="title">
-				<p>Myrick & Estelle House</p>
-			</div>
-			<a title="Click to view" onclick="openViewer('pictures/myrickEstelleHouse.jpg')">
-				<img src="thumbnails/myrickEstelleHouse_t.jpg" alt="Myrick and Estelle House" width="230" height="230">
-			</a>
-			<div class="description">
-				<p>Pen & Ink</p>
-				<p>17" &times; 12"</p>
-			</div>
-		</div>
-	</div>
-</div>
-<div class="penInk all">
-	<div class="responsive">
-		<div class="panel">
-			<div class="title">
-				<p>Keen Home</p>
-			</div>
-			<a title="Click to view" onclick="openViewer('pictures/keenHome.jpg')">
-				<img src="thumbnails/keenHome_t.jpg" alt="Keen Home" width="230" height="230">
-			</a>
-			<div class="description">
-				<p>Pen & Ink</p>
-				<p>20" &times; 14"</p>
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Constitution</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('pictures/constitution.jpg')">
+					<img src="thumbnails/constitution_t.jpg" alt="Constitution" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>22" &times; 28"</p>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
-<div class="penInk all">
-	<div class="responsive">
-		<div class="panel">
-			<div class="title">
-				<p>Cassem Home</p>
-			</div>
-			<a title="Click to view" onclick="openViewer('pictures/cassemHome.jpg')">
-				<img src="thumbnails/cassemHome_t.jpg" alt="Cassem Home" width="230" height="230">
-			</a>
-			<div class="description">
-				<p>Pen & Ink</p>
-				<p>20" &times; 14"</p>
-			</div>
-		</div>
-	</div>
-</div>
-<div class="oil all">
-	<div class="responsive">
-		<div class="panel">
-			<div class="title">
-				<p>Oregon Lake</p>
-			</div>
-			<a title="Click to view" onclick="openViewer('pictures/oregonLake.jpg')">
-				<img src="thumbnails/oregonLake_t.jpg" alt="Oregon Lake" width="230" height="230">
-			</a>
-			<div class="description">
-				<p>Oil</p>
-				<p>30" &times; 40"</p>
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Happy Feet</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('pictures/happyFeet.jpg')">
+					<img src="thumbnails/happyFeet_t.jpg" alt="Happy Feet" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>18" &times; 24"</p>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
-<div class="oil all">
-	<div class="responsive">
-		<div class="panel">
-			<div class="title">
-				<p>Justin</p>
-			</div>
-			<a title="Click to view" onclick="openViewer('pictures/justin.jpg')">
-				<img src="thumbnails/justin_t.jpg" alt="Justin" width="230" height="230">
-			</a>
-			<div class="description">
-				<p>Oil</p>
-				<p>30" &times; 40"</p>
-			</div>
-		</div>
-	</div>
-</div>
-<div class="oil all">
-	<div class="responsive">
-		<div class="panel">
-			<div class="title">
-				<p>Tyler Reed</p>
-			</div>
-			<a title="Click to view" onclick="openViewer('pictures/tylerReed.jpg')">
-				<img src="thumbnails/tylerReed_t.jpg" alt="Tyler Reed" width="230" height="230">
-			</a>
-			<div class="description">
-				<p>Oil</p>
-				<p>30" &times; 40"</p>
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Meet My Main Squeeze</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('pictures/meetMyMainSqueeze.jpg')">
+					<img src="thumbnails/meetMyMainSqueeze_t.jpg" alt="Meet My Main Squeeze" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>18" &times; 24"</p>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
-<div class="oil all">
-	<div class="responsive">
-		<div class="panel">
-			<div class="title">
-				<p>Comforting</p>
-			</div>
-			<a title="Click to view" onclick="openViewer('pictures/comforting.jpg')">
-				<img src="thumbnails/comforting_t.jpg" alt="Comforting" width="230" height="230">
-			</a>
-			<div class="description">
-				<p>Oil</p>
-				<p>30" &times; 40"</p>
-			</div>
-		</div>
-	</div>
-</div>
-<div class="oil all">
-	<div class="responsive">
-		<div class="panel">
-			<div class="title">
-				<p>Girl in Flower Garden</p>
-			</div>
-			<a title="Click to view" onclick="openViewer('pictures/girlInFlowerGarden.jpg')">
-				<img src="thumbnails/girlInFlowerGarden_t.jpg" alt="Girl in Flower Garden" width="230" height="230">
-			</a>
-			<div class="description">
-				<p>Oil</p>
-				<p>30" &times; 40"</p>
+	<div class="penInk all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Myrick & Estelle House</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('pictures/myrickEstelleHouse.jpg')">
+					<img src="thumbnails/myrickEstelleHouse_t.jpg" alt="Myrick and Estelle House" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Pen & Ink</p>
+					<p>17" &times; 12"</p>
+				</div>
 			</div>
 		</div>
 	</div>
+	<div class="penInk all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Keen Home</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('pictures/keenHome.jpg')">
+					<img src="thumbnails/keenHome_t.jpg" alt="Keen Home" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Pen & Ink</p>
+					<p>20" &times; 14"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="penInk all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Cassem Home</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('pictures/cassemHome.jpg')">
+					<img src="thumbnails/cassemHome_t.jpg" alt="Cassem Home" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Pen & Ink</p>
+					<p>20" &times; 14"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Oregon Lake</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('pictures/oregonLake.jpg')">
+					<img src="thumbnails/oregonLake_t.jpg" alt="Oregon Lake" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>30" &times; 40"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Justin</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('pictures/justin.jpg')">
+					<img src="thumbnails/justin_t.jpg" alt="Justin" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>30" &times; 40"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Tyler Reed</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('pictures/tylerReed.jpg')">
+					<img src="thumbnails/tylerReed_t.jpg" alt="Tyler Reed" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>30" &times; 40"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Comforting</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('pictures/comforting.jpg')">
+					<img src="thumbnails/comforting_t.jpg" alt="Comforting" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>30" &times; 40"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Girl in Flower Garden</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('pictures/girlInFlowerGarden.jpg')">
+					<img src="thumbnails/girlInFlowerGarden_t.jpg" alt="Girl in Flower Garden" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>30" &times; 40"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--END DRAWINGS-->
 </div>
-<!--END DRAWINGS-->
 
 </div>
 <script type="text/javascript" src="../menu.js"></script>
