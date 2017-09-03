@@ -11,7 +11,7 @@ var slide = document.getElementById("slide");
 // Add all of the images from the slideshow folder into an array
 var slides = [];
 for(var i = 0; i < numSlides; i++){
-	slides[i] = "homePage/slideshow/slide" + i + ".jpg";
+	slides[i] = "resources/slideshow/slide" + i + ".jpg";
 }
 
 // Set the src of the slide to a random slide

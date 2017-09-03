@@ -92,7 +92,7 @@
 	background-color: rgb(0,0,0);
 	background-color: rgba(0,0,0,0.8);
 	overflow-x: hidden; /*No horizontal scrolling*/
-	transition: 0.2s;
+	/*transition: 0.2s;*/
 }
 
 #picViewer .overlay-content{
