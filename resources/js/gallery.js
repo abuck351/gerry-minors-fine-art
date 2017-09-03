@@ -19,8 +19,8 @@ function openViewer(img){
 function closeViewer(){
 	document.getElementById("picViewer").style.height = "0%"; // Close the viewer
 
-	//Remove the blur effect 
-	document.getElementById("pageBody").style.webkitFilter = "none";
+	// Remove the blur effect 
+	// document.getElementById("pageBody").style.webkitFilter = "none";
 
 	// Reenable scrolling
 	document.getElementsByTagName("BODY")[0].style.overflow = "initial";
