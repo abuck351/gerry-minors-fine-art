@@ -21,6 +21,10 @@
 	margin: 0;
 }
 
+.panel a{
+	color: white;
+}
+
 .panel p{
 	text-indent: 50px;
 	font-family: 'Open Sans', sans-serif;
