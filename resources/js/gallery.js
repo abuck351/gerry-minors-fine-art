@@ -1,9 +1,11 @@
 var tranSpeed = 0.3;
 var blurAmount = 10;
 
-function openViewer(img){
+function openViewer(img, title){
 	document.getElementById("viewedImage").src = img; // Set the image
 	document.getElementById("picViewer").style.height = "100%"; // Open the overlay
+	console.log(title);
+	document.getElementById('viewerImageTitle').innerHTML = title;
 
 	// Add the blur effect 
 	/*
