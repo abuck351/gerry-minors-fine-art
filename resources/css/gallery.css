@@ -30,6 +30,12 @@
 
 .panel a{
 	color: white;
+	font-size: 30px;
+	font-family: 'Open Sans', sans-serif;
+	text-decoration: none;
+	width: 100%;
+	display: inline-block;
+	margin: 20px;
 }
 
 .galleryBody{
