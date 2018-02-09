@@ -26,6 +26,7 @@ function closeViewer(){
 
 	// Reenable scrolling
 	document.getElementsByTagName("BODY")[0].style.overflow = "initial";
+	document.getElementById("viewedImage").src = "";
 }
 
 var type = "all"; // The default type of drawing
