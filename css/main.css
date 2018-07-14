@@ -1,6 +1,7 @@
 body {
-	background-color: #111;
+	background-color: #101638;
 	background-image: url("background.jpg");
+	background-size: cover;
 	font-family: 'Lora', serif;
 }
 
@@ -21,7 +22,7 @@ a {
 
 a:hover {
 	text-decoration: underline;
-	color: #f07742;
+	color: #fdea5d;
 }
 
 nav ul {
