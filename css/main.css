@@ -4,15 +4,31 @@ body {
 	font-family: 'Lora', serif;
 }
 
+.title {
+	font-size: 4em;
+	text-align: center;
+}
+
 h1 {
 	font-family: 'Satisfy', cursive;
 	color: #FFF;
 }
 
-nav ul, footer ul {
+a {
+	text-decoration: none;
+	color: #FFF;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: #FFDF11;
+}
+
+nav ul {
   	padding: 0px;
   	list-style: none;
   	font-weight: bold;
+  	font-size: 2em;
 }
 
 nav ul li {
