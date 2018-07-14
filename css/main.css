@@ -1,6 +1,6 @@
 body {
 	background-color: #111;
-	background-image: url("background.jpg");
+	background-image: url("../background.jpg");
 }
 
 nav ul, footer ul {
