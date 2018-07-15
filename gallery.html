@@ -1,0 +1,1891 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Gallery</title>
+<link rel="shortcut icon" href="resources/favicons/favicon.ico">
+<link rel="icon" sizes="16x16 32x32 64x64" href="resources/favicons/favicon.ico">
+<link rel="icon" type="image/png" sizes="196x196" href="resources/favicons/favicon-192.png">
+<link rel="icon" type="image/png" sizes="160x160" href="resources/favicons/favicon-160.png">
+<link rel="icon" type="image/png" sizes="96x96" href="resources/favicons/favicon-96.png">
+<link rel="icon" type="image/png" sizes="64x64" href="resources/favicons/favicon-64.png">
+<link rel="icon" type="image/png" sizes="32x32" href="resources/favicons/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="resources/favicons/favicon-16.png">
+<link rel="apple-touch-icon" href="resources/favicons/favicon-57.png">
+<link rel="apple-touch-icon" sizes="114x114" href="resources/favicons/favicon-114.png">
+<link rel="apple-touch-icon" sizes="72x72" href="resources/favicons/favicon-72.png">
+<link rel="apple-touch-icon" sizes="144x144" href="resources/favicons/favicon-144.png">
+<link rel="apple-touch-icon" sizes="60x60" href="resources/favicons/favicon-60.png">
+<link rel="apple-touch-icon" sizes="120x120" href="resources/favicons/favicon-120.png">
+<link rel="apple-touch-icon" sizes="76x76" href="resources/favicons/favicon-76.png">
+<link rel="apple-touch-icon" sizes="152x152" href="resources/favicons/favicon-152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="resources/favicons/favicon-180.png">
+<meta name="msapplication-TileColor" content="#FFFFFF">
+<meta name="msapplication-TileImage" content="resources/favicons/favicon-144.png">
+<meta name="msapplication-config" content="resources/favicons/browserconfig.xml">
+
+<!--Makes the website responsive on mobile-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--References-->
+<link href="https://fonts.googleapis.com/css?family=Petit+Formal+Script" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.comjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="resources/css/gallery.css">
+<link rel="stylesheet" type="text/css" href="resources/css/style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="resources/js/gallery.js"></script>
+
+</head>
+<body>
+
+<!--Picture Viewer-->
+<div id="picViewer" class="overlay">
+	<!--Close button-->
+	<a title="Close" id="closeButton" onclick="closeViewer()" href="javascript:void(0)">&times;</a>
+	<br>
+	<!--Image that is being viewed-->
+	<div class="overlay-content">
+		<div class="title">
+			<p id="viewerImageTitle">Sample</p>
+		</div>
+		<img id="viewedImage" src="">
+	</div>
+</div>
+
+<div id="top"></div>
+
+<div id="pageBody">
+<!--Navigation Bar-->
+<ul class="topnav" id="topNav">
+	<!--Name of Website (clickable)-->
+	<a href="index.html" style="text-decoration: none;">
+		<h1 class="webname">Gerry Minor's Fine Art</h1>
+	</a>
+	<li class="menu">
+		<!--Hamburger menu icon appears when screen gets smaller-->
+		<a href="javascript:void(0);" onclick="menuClicked()">&#9776;</a>
+	</li>
+	<li><a href="index.html">Home</a></li>
+	<li><a class="active" href="#">Gallery</a></li>
+	<li><a href="about.html">About</a></li>
+	<li><a href="contact.html">Contact</a></li>
+</ul>
+
+<!--Filter-->
+<div class="galleryBody">
+	<div class="responsive">
+		<div class="panel">
+			<div class="title" style="font-size: 35px">
+				<p>Filter</p>
+			</div>
+			<div class="radios">
+			<label><input type="radio" onclick="getType()" name="type" value="all" checked> All</label><br>
+			<label><input type="radio" onclick="getType()" name="type" value="oil"> Oil</label><br>
+			<label><input type="radio" onclick="getType()" name="type" value="pencil"> Pencil</label><br>
+			<label><input type="radio" onclick="getType()" name="type" value="penInk"> Pen & Ink</label><br>
+			<label><input type="radio" onclick="getType()" name="type" value="other"> Other</label><br>
+		</div>
+		</div>
+	</div>
+
+	<!--DRAWINGS-->
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Kitty in Trouble</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/kittyInTrouble.jpg', 'Kitty in Trouble')">
+					<img src="resources/thumbnails/kittyInTrouble_t.jpg" alt="Kitty in Trouble" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>16" &times; 20"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Romeo and Juliet</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/romeoAndJuliet.jpg', 'Romeo and Juliet')">
+					<img src="resources/thumbnails/romeoAndJuliet_t.jpg" alt="Romeo and Juliet" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>18" &times; 24"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="pencil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>A Good Lesson</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/aGoodLesson.jpg', 'A Good Lesson')">
+					<img src="resources/thumbnails/aGoodLesson_t.jpg" alt="A Good Lesson" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Pencil</p>
+					<p>10.5" &times; 13.5"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Constitution</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/constitution.jpg', 'Constitution')">
+					<img src="resources/thumbnails/constitution_t.jpg" alt="Constitution" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>22" &times; 28"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Happy Feet</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/happyFeet.jpg', 'Happy Feet')">
+					<img src="resources/thumbnails/happyFeet_t.jpg" alt="Happy Feet" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>18" &times; 24"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Meet My Main Squeeze</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/meetMyMainSqueeze.jpg', 'Meet My Main Squeeze')">
+					<img src="resources/thumbnails/meetMyMainSqueeze_t.jpg" alt="Meet My Main Squeeze" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>18" &times; 24"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="penInk all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Myrick & Estelle House</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/myrickEstelleHouse.jpg', 'Myrick & Estelle House')">
+					<img src="resources/thumbnails/myrickEstelleHouse_t.jpg" alt="Myrick and Estelle House" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Pen & Ink</p>
+					<p>17" &times; 12"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="penInk all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Minor's Home</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/minorHome.jpg', 'Minor\'s Home')">
+					<img src="resources/thumbnails/minorHome_t.jpg" alt="Minor's Home" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Pen & Ink</p>
+					<p>15" &times; 11.5"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="penInk all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Keen Home</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/keenHome.jpg', 'Keen Home')">
+					<img src="resources/thumbnails/keenHome_t.jpg" alt="Keen Home" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Pen & Ink</p>
+					<p>20" &times; 14"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="penInk all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Cassem Home</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/cassemHome.jpg', 'Cassem Home')">
+					<img src="resources/thumbnails/cassemHome_t.jpg" alt="Cassem Home" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Pen & Ink</p>
+					<p>20" &times; 14"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Oregon Lake</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/oregonLake.jpg', 'Oregon Lake')">
+					<img src="resources/thumbnails/oregonLake_t.jpg" alt="Oregon Lake" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>40" &times; 30"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Justin Brutcher</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/justin.jpg', 'Justin Brutcher')">
+					<img src="resources/thumbnails/justin_t.jpg" alt="Justin" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>16" &times; 20"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Comforting</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/comforting.jpg', 'Comforting')">
+					<img src="resources/thumbnails/comforting_t.jpg" alt="Comforting" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>20" &times; 30"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Girl in Flower Garden</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/girlInFlowerGarden.jpg', 'Girl in Flower Garden')">
+					<img src="resources/thumbnails/girlInFlowerGarden_t.jpg" alt="Girl in Flower Garden" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>18" &times; 24"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Cat Newberry</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/catNewberry.jpg', 'Cat Newberry')">
+					<img src="resources/thumbnails/catNewberry_t.jpg" alt="Cat Newberry" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>30" &times; 20"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Lambs</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/lambs.jpg', 'Lambs')">
+					<img src="resources/thumbnails/lambs_t.jpg" alt="Lambs" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>20" &times; 16"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Tiger</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/tiger.jpg', 'Tiger')">
+					<img src="resources/thumbnails/tiger_t.jpg" alt="Tiger" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>24" &times; 36"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Three Snow Leopards</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/threeSnowLeopards.jpg', 'Three Snow Leopards')">
+					<img src="resources/thumbnails/threeSnowLeopards_t.jpg" alt="Three Snow Leopards" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>15" &times; 30"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Yellow Rose</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/yellowRose.png', 'Yellow Rose')">
+					<img src="resources/thumbnails/yellowRose_t.jpg" alt="Yellow Rose" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>5" &times; 7" (Oval)</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Pink Roses</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/pinkRoses.png', 'Pink Roses')">
+					<img src="resources/thumbnails/pinkRoses_t.jpg" alt="Pink Roses" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>5" &times; 7"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Jim Leisner</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/jimLeisner.jpg', 'Jim Leisner')">
+					<img src="resources/thumbnails/jimLeisner_t.jpg" alt="Jim Leisner" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil: degraded photo quality</p>
+					<p>22" &times; 24"</p>
+				</div>
+			</div>
+		</div>
+	</div> 
+
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Robert Tranquada, M.D.</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/robertTranquada.jpg', 'Robert Tranquada, M.D.')">
+					<img src="resources/thumbnails/robertTranquada_t.jpg" alt="Robert Tranquada, M.D." width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>22" &times; 24"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Francis McBeth, Ph.D.</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/francisMcbeth.jpg', 'Francis McBeth, Ph.D.')">
+					<img src="resources/thumbnails/francisMcbeth_t.jpg" alt="Francis McBeth, Ph.D." width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>22" &times; 24"</p>
+				</div>
+			</div>
+		</div>
+	</div>  
+
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Jack Mossler, M.D.</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/jackMossler.jpg', 'Jack Mossler, M.D.')">
+					<img src="resources/thumbnails/jackMossler_t.jpg" alt="Jack Mossler, M.D." width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>22" &times; 24"</p>
+				</div>
+			</div>
+		</div>
+	</div>   
+
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Gustavo Carranza</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/gustavoCarranzaYounger.jpg', 'Gustavo Carranza (Younger)')">
+					<img src="resources/thumbnails/gustavoCarranzaYounger_t.jpg" alt="Gustavo Carranza" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>22" &times; 24"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Gustavo Carranza</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/gustavoCarranzaOlder.jpg', 'Gustavo Carranza (Older)')">
+					<img src="resources/thumbnails/gustavoCarranzaOlder_t.jpg" alt="Gustavo Carranza" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>22" &times; 24"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Benton Minor</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/bentonMinor.jpg', 'Benton Minor')">
+					<img src="resources/thumbnails/bentonMinor_t.jpg" alt="Benton Minor" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil: degraded photo quality</p>
+					<p>22" &times; 24"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Howard Swan, Ph.D.</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/howardSwan.jpg', 'Howard Swan, Ph.D.')">
+					<img src="resources/thumbnails/howardSwan_t.jpg" alt="Howard Swan" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>22" &times; 24"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="pencil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Igor Stravinsky</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/igorStravinsky.jpg', 'Igor Stravinsky')">
+					<img src="resources/thumbnails/igorStravinsky_t.jpg" alt="Igor Stravinsky" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Pencil</p>
+					<p>9.5" &times; 12.4"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="pencil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Elliott Carter</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/elliottCarter.jpg', 'Elliott Carter')">
+					<img src="resources/thumbnails/elliottCarter_t.jpg" alt="Elliott Carter" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Pencil</p>
+					<p>9.5" &times; 12.4"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="pencil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Frank Zappa</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/frankZappa.jpg', 'Frank Zappa')">
+					<img src="resources/thumbnails/frankZappa_t.jpg" alt="Frank Zappa" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Pencil</p>
+					<p>9.5" &times; 12.4"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="pencil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Charles Ives</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/charlesIves.jpg', 'Charles Ives (First Portrait)')">
+					<img src="resources/thumbnails/charlesIves_t.jpg" alt="Charles Ives (First Portrait)" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Pencil</p>
+					<p>9.5" &times; 12.4"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="pencil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Charles Ives</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/charlesIves2.jpg', 'Charles Ives (Second Portrait)')">
+					<img src="resources/thumbnails/charlesIves2_t.jpg" alt="Charles Ives (Second Portrait)" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Pencil</p>
+					<p>9.5" &times; 12.4"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Jim Trebilcox</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/jimTrebilcox.jpg', 'Jim Trebilcox (Jesus Christ Super Star, FCLO)')">
+					<img src="resources/thumbnails/jimTrebilcox_t.jpg" alt="Jim Trebilcox" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>22" &times; 24"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="penInk all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Little League</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/littleLeague1.jpg', 'Little League (Batting)')">
+					<img src="resources/thumbnails/littleLeague1_t.jpg" alt="Little League (Batting)" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Pen & Ink</p>
+					<p>12" &times; 16"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="penInk all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Little League</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/littleLeague2.jpg', 'Little League (Grounding)')">
+					<img src="resources/thumbnails/littleLeague2_t.jpg" alt="Little League (Grounding)" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Pen & Ink</p>
+					<p>12" &times; 16"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="penInk all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Little League</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/littleLeague3.jpg', 'Little League (Running)')">
+					<img src="resources/thumbnails/littleLeague3_t.jpg" alt="Little League (Running)" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Pen & Ink</p>
+					<p>12" &times; 16"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Images of Yesteryear</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/imagesOfYesteryear.jpg', 'Images of Yesteryear')">
+					<img src="resources/thumbnails/imagesOfYesteryear_t.jpg" alt="Images of Yesteryear" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>20" &times; 30"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Midnight Summers...</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/midnightSummersDream.jpg', 'Midnight Summers Dream')">
+					<img src="resources/thumbnails/midnightSummersDream_t.jpg" alt="Midnight Summers Dream" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>20" &times; 24"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Cardinals</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/cardinals1.jpg', 'Cardinals 1')">
+					<img src="resources/thumbnails/cardinals1_t.jpg" alt="Cardinals 1" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>10" &times; 8"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Cardinals</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/cardinals2.jpg', 'Cardinals 2')">
+					<img src="resources/thumbnails/cardinals2_t.jpg" alt="Cardinals 2" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>8" &times; 10"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Hobie-Jack</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/hobieJack.jpg', 'Hobie-Jack')">
+					<img src="resources/thumbnails/hobieJack_t.jpg" alt="Hobie-Jack" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>20" &times; 14"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Spring Fantasy</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/springFantasy.jpg', 'Spring Fantasy')">
+					<img src="resources/thumbnails/springFantasy_t.jpg" alt="Spring Fantasy" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>34" &times; 30"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Poppies & Lupine</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/poppiesLupine.jpg', 'Poppies & Lupine')">
+					<img src="resources/thumbnails/poppiesLupine_t.jpg" alt="Poppies & Lupine" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>16" &times; 20"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Stormy Cove</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/stormyCove.jpg', 'Stormy Cove')">
+					<img src="resources/thumbnails/stormyCove_t.jpg" alt="Stormy Cove" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>20" &times; 30"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Rocky California...</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/rockyCaliforniaCoastline.jpg', 'Rocky California Coastline')">
+					<img src="resources/thumbnails/rockyCaliforniaCoastline_t.jpg" alt="Rocky California Coastline" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>49" &times; 25"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Thomas Kinkade</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/thomasKinkade.jpg', 'Thomas Kinkade, Personalized')">
+					<img src="resources/thumbnails/thomasKinkade_t.jpg" alt="Thomas Kinkade, Personalized" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>30" &times; 20"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Table Mountain</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/tableMountain.jpg', 'Table Mountain, South Africa')">
+					<img src="resources/thumbnails/tableMountain_t.jpg" alt="Table Mountain, South Africa" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>30" &times; 20"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>McWay Falls</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/mcwayFalls.jpg', 'McWay Falls, California Coastline')">
+					<img src="resources/thumbnails/mcwayFalls_t.jpg" alt="McWay Falls, California Coastline" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>36" &times; 24"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Misty Forest</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/mistyForest.jpg', 'Misty Forest')">
+					<img src="resources/thumbnails/mistyForest_t.jpg" alt="Misty Forest" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>30" &times; 24"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>California Coastline</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/californiaCoastline.jpg', 'California Coastline')">
+					<img src="resources/thumbnails/californiaCoastline_t.jpg" alt="California Coastline" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>12" &times; 24"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Sunrise Over Lake</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/sunriseOverLake.jpg', 'Sunrise Over Lake')">
+					<img src="resources/thumbnails/sunriseOverLake_t.jpg" alt="Sunrise Over Lake" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>30" &times; 20"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Craigh na dun</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/craighNaDun.jpg', 'Craigh na dun, Scotland')">
+					<img src="resources/thumbnails/craighNaDun_t.jpg" alt="Craigh na dun, Scotland" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>20" &times; 16"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Samoan Island</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/samoanIsland.jpg', 'Samoan Island')">
+					<img src="resources/thumbnails/samoanIsland_t.jpg" alt="Samoan Island" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>36" &times; 24"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Rangiroa, Tahiti</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/rangiroa.jpg', 'Rangiroa, Tahiti')">
+					<img src="resources/thumbnails/rangiroa_t.jpg" alt="Rangiroa, Tahiti" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>36" &times; 24"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Hershey's Kiss</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/hersheyKiss.jpg', 'Hershey\'s Kiss')">
+					<img src="resources/thumbnails/hersheyKiss_t.jpg" alt="Hershey's Kiss" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>24" &times; 36"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Grandpa & Me</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/grandpaMe.jpg', 'Grandpa & Me')">
+					<img src="resources/thumbnails/grandpaMe_t.jpg" alt="Grandpa & Me" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>24" &times; 30"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Alaskan Wilderness</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/alaskanWilderness.jpg', 'Alaskan Wilderness')">
+					<img src="resources/thumbnails/alaskanWilderness_t.jpg" alt="Alaskan Wilderness" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>36" &times; 24"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Serenity</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/serenity.jpg', 'Serenity')">
+					<img src="resources/thumbnails/serenity_t.jpg" alt="Serenity" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>29.5" &times; 24"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Loving Sisters</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/lovingSisters.jpg', 'Loving Sisters')">
+					<img src="resources/thumbnails/lovingSisters_t.jpg" alt="Loving Sisters" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>24" &times; 30"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Great Smoky Mountain</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/greatSmokyMountain.jpg', 'Great Smoky Mountain Nat\'l Park')">
+					<img src="resources/thumbnails/greatSmokyMountain_t.jpg" alt="Great Smoky Mountain Nat'l Park" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>36" &times; 24"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Autumn</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/autumn.jpg', 'Autumn')">
+					<img src="resources/thumbnails/autumn_t.jpg" alt="Autumn" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>22" &times; 28"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Mountain Majesty</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/mountainMajesty.jpg', 'Mountain Majesty')">
+					<img src="resources/thumbnails/mountainMajesty_t.jpg" alt="Mountain Majesty" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>48" &times; 24"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Grapes</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/grapes.jpg', 'Grapes')">
+					<img src="resources/thumbnails/grapes_t.jpg" alt="Grapes" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>8" &times; 16"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Yellow Daisies</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/yellowDaisies.jpg', 'Yellow Daisies')">
+					<img src="resources/thumbnails/yellowDaisies_t.jpg" alt="Yellow Daisies" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>11" &times; 14"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Kaylynn Reed</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/kaylynnReed.jpg', 'Kaylynn Reed')">
+					<img src="resources/thumbnails/kaylynnReed_t.jpg" alt="Kaylynn Reed" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>16" &times; 20"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Tyler Reed</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/tylerReed.jpg', 'Tyler Reed')">
+					<img src="resources/thumbnails/tylerReed_t.jpg" alt="Tyler Reed" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>16" &times; 20"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Carolynn Minor</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/carolynnMinor.jpg', 'Carolynn Minor')">
+					<img src="resources/thumbnails/carolynnMinor_t.jpg" alt="Carolynn Minor" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>20" &times; 24"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Ron Minor</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/ronMinor.jpg', 'Ron Minor')">
+					<img src="resources/thumbnails/ronMinor_t.jpg" alt="Ron Minor" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>20" &times; 24"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Lynda Minor</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/lyndaMinor.jpg', 'Lynda Minor')">
+					<img src="resources/thumbnails/lyndaMinor_t.jpg" alt="Lynda Minor" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>20" &times; 24"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Bob Minor</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/bobMinor.jpg', 'Bob Minor')">
+					<img src="resources/thumbnails/bobMinor_t.jpg" alt="Bob Minor" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>20" &times; 24"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Denise Minor</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/deniseMinor.png', 'Denise Minor')">
+					<img src="resources/thumbnails/deniseMinor_t.jpg" alt="Denise Minor" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>15" &times; 20"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Debbie Minor</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/debbieMinor.png', 'Debbie Minor')">
+					<img src="resources/thumbnails/debbieMinor_t.jpg" alt="Debbie Minor" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>15" &times; 20"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="pencil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Brendan Newberry</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/brendanNewberry.jpg', 'Brendan Newberry')">
+					<img src="resources/thumbnails/brendanNewberry_t.jpg" alt="Brendan Newberry" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Pencil</p>
+					<p>7.5" &times; 9.5"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="pencil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Denise Newberry</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/deniseNewberry.jpg', 'Denise Newberry')">
+					<img src="resources/thumbnails/deniseNewberry_t.jpg" alt="Denise Newberry" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Pencil</p>
+					<p>7.5" &times; 9.5"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="pencil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Cat Newberry</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/catNewberry2.jpg', 'Cat Newberry')">
+					<img src="resources/thumbnails/catNewberry2_t.jpg" alt="Cat Newberry" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Pencil</p>
+					<p>7.5" &times; 9.5"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="pencil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Robby Newberry</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/robbyNewberry.jpg', 'Robby Newberry')">
+					<img src="resources/thumbnails/robbyNewberry_t.jpg" alt="Robby Newberry" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Pencil</p>
+					<p>7.5" &times; 9.5"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="pencil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Aaron Buckles</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/aaronBuckles.jpg', 'Aaron Buckles')">
+					<img src="resources/thumbnails/aaronBuckles_t.jpg" alt="Aaron Buckles" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Pencil</p>
+					<p>7.5" &times; 9.5"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="pencil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Mason Buckles</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/masonBuckles.jpg', 'Mason Buckles')">
+					<img src="resources/thumbnails/masonBuckles_t.jpg" alt="Mason Buckles" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Pencil</p>
+					<p>7.5" &times; 9.5"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="pencil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Debbie & Aaron</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/debbieAaron.jpg', 'Debbie & Aaron')">
+					<img src="resources/thumbnails/debbieAaron_t.jpg" alt="Debbie & Aaron" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Pencil</p>
+					<p>9.5" &times; 7.5"</p>
+				</div>
+			</div>
+		</div>
+	</div>  
+
+	<div class="pencil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Reggie's Patience</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/reggiePatience.jpg', 'Reggie\'s Patience with Mason')">
+					<img src="resources/thumbnails/reggiePatience_t.jpg" alt="Reggie's Patience with Mason" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Pencil</p>
+					<p>7.5" &times; 9.5"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="pencil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Reggie</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/reggie.jpg', 'Reggie (Havanese)')">
+					<img src="resources/thumbnails/reggie_t.jpg" alt="Reggie (Havanese)" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Pencil</p>
+					<p>7.5" &times; 10.5"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="pencil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Blow That Horn</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/blowThatHorn.jpg', 'Blow That Horn')">
+					<img src="resources/thumbnails/blowThatHorn_t.jpg" alt="Blow That Horn" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Pencil</p>
+					<p>10.5" &times; 13.5"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="pencil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Mark & Jacob</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/markJacob.jpg', 'Mark & Jacob Woolsey')">
+					<img src="resources/thumbnails/markJacob_t.jpg" alt="Mark & Jacob Woolsey" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Pencil</p>
+					<p>7.5" &times; 10.5"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="penInk all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Old Mill</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/oldMill.jpg', 'Old Mill')">
+					<img src="resources/thumbnails/oldMill_t.jpg" alt="Old Mill" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Pen & Ink</p>
+					<p>7.5" &times; 9.5"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="pencil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Tyler & Kaylynn</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/tylerKaylynnReed.jpg', 'Tyler & Kaylynn Reed')">
+					<img src="resources/thumbnails/tylerKaylynnReed_t.jpg" alt="Tyler & Kaylynn Reed" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Pencil</p>
+					<p>7.5" &times; 10.5"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="pencil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Joel & Atisa</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/joelAtisaMinor.jpg', 'Joel & Atisa Minor')">
+					<img src="resources/thumbnails/joelAtisaMinor_t.jpg" alt="Joel & Atisa Minor" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Pencil</p>
+					<p>7.5" &times; 10.5"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="pencil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Cat & Robby</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/catRobbyNewberry.jpg', 'Cat & Robby Newberry')">
+					<img src="resources/thumbnails/catRobbyNewberry_t.jpg" alt="Cat & Robby Newberry" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Pencil</p>
+					<p>11" &times; 8.5"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="pencil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Aaron & Mason</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/aaronMasonBuckles.jpg', 'Aaron & Mason Buckles')">
+					<img src="resources/thumbnails/aaronMasonBuckles_t.jpg" alt="Aaron & Mason Buckles" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Pencil</p>
+					<p>8.5" &times; 11"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="other all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Sweet Silver</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/sweetSilver.jpg', 'Sweet Silver')">
+					<img src="resources/thumbnails/sweetSilver_t.jpg" alt="Sweet Silver" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Pen & Ink, Watercolor</p>
+					<p>22.5" &times; 15.5"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="other all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Aaron & Robby</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/aaronBucklesRobbyNewberry.jpg', 'Aaron Buckles & Robby Newberry')">
+					<img src="resources/thumbnails/aaronBucklesRobbyNewberry_t.jpg" alt="Aaron Buckles & Robby Newberry" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Watercolor</p>
+					<p>8.5" &times; 11"</p>
+				</div>
+			</div>
+		</div>
+	</div> 
+
+	<div class="pencil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Cat & Friends</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/catFriends.jpg', 'Cat & Friends')">
+					<img src="resources/thumbnails/catFriends_t.jpg" alt="Cat & Friends" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Pencil</p>
+					<p>11" &times; 8.5"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="pencil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Cat at the Beach</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/catAtTheBeach.jpg', 'Cat at the Beach')">
+					<img src="resources/thumbnails/catAtTheBeach_t.jpg" alt="Cat at the Beach" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Pencil</p>
+					<p>8.5" &times; 11"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="pencil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Cat with Rabbit</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/catWithRabbit.jpg', 'Cat with Rabbit')">
+					<img src="resources/thumbnails/catWithRabbit_t.jpg" alt="Cat with Rabbit" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Pencil</p>
+					<p>8.5" &times; 11"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="pencil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Christmas Stories</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/christmasStories.jpg', 'Christmas Stories')">
+					<img src="resources/thumbnails/christmasStories_t.jpg" alt="Christmas Stories" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Pencil</p>
+					<p>10.5" &times; 13.5"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="pencil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Picking Corn</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/pickingCorn.jpg', 'Picking Corn')">
+					<img src="resources/thumbnails/pickingCorn_t.jpg" alt="Picking Corn" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Pencil</p>
+					<p>7.5" &times; 11.5"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="pencil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Grandma & Me</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/grandmaMe.jpg', 'Grandma & Me')">
+					<img src="resources/thumbnails/grandmaMe_t.jpg" alt="Grandma & Me" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Pencil</p>
+					<p>11" &times; 11"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="pencil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Bedtime Stories</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/bedtimeStories.jpg', 'Bedtime Stories')">
+					<img src="resources/thumbnails/bedtimeStories_t.jpg" alt="Bedtime Stories" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Pencil</p>
+					<p>7.5" &times; 9.5"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="pencil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Early Morning Fishing</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/earlyMorningFishing.jpg', 'Early Morning Fishing')">
+					<img src="resources/thumbnails/earlyMorningFishing_t.jpg" alt="Early Morning Fishing" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Pencil</p>
+					<p>9.5" &times; 7.5"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="pencil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>What's In There?</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/whatsInThere.jpg', 'What\'s In There?')">
+					<img src="resources/thumbnails/whatsInThere_t.jpg" alt="What's In There" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Pencil</p>
+					<p>8" &times; 13.5"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="pencil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Friendly Hug</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/friendlyHug.jpg', 'Friendly Hug')">
+					<img src="resources/thumbnails/friendlyHug_t.jpg" alt="Friendly Hug" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Pencil</p>
+					<p>5.5" &times; 7.5"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="pencil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>One Moment in Time</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/oneMomentInTime.jpg', 'One Moment in Time')">
+					<img src="resources/thumbnails/oneMomentInTime_t.jpg" alt="One Moment in Time" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Pencil</p>
+					<p>8.5" &times; 11.5"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="oil all">
+		<div class="responsive">
+			<div class="panel">
+				<div class="title">
+					<p>Jana Jobes</p>
+				</div>
+				<a title="Click to view" onclick="openViewer('resources/pictures/janaJobes.jpg', 'Jana Jobes')">
+					<img src="resources/thumbnails/janaJobes_t.jpg" alt="Jana Jobes" width="230" height="230">
+				</a>
+				<div class="description">
+					<p>Oil</p>
+					<p>16" &times; 20"</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!--     <div class="pencil all">
+        <div class="responsive">
+            <div class="panel">
+                <div class="title">
+                    <p>Poppy Fantasy</p>
+                </div>
+                <a title="Click to view" onclick="openViewer('resources/pictures/poppyFantasy.jpg')">
+                    <img src="resources/thumbnails/poppyFantasy_t.jpg" alt="Poppy Fantasy" width="230" height="230">
+                </a>
+                <div class="description">
+                    <p>Pencil</p>
+                    <p>7.5" &times; 9.5"</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pencil all">
+        <div class="responsive">
+            <div class="panel">
+                <div class="title">
+                    <p>Lazy River</p>
+                </div>
+                <a title="Click to view" onclick="openViewer('resources/pictures/lazyRiver.jpg')">
+                    <img src="resources/thumbnails/lazyRiver_t.jpg" alt="Lazy River" width="230" height="230">
+                </a>
+                <div class="description">
+                    <p>Pencil</p>
+                    <p>9.5" &times; 7.5"</p>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="pencil penInk oil other all">
+		<div class="responsive">
+			<div class="panel title">
+				<a href="#top">Back to top</a>
+			</div>
+		</div>
+	</div>
+
+</div>
+</div>
+<script type="text/javascript" src="resources/js/menu.js"></script>
+</body>
+</html>
