@@ -9,94 +9,48 @@ body{
     background-attachment: fixed;
 }
 
-/*The title of the website*/
 h1.webname{
 	font-size: 40px;
-	color: #FFF; /*Font color*/
+	color: #FFF;
 	font-family: 'Petit Formal Script', cursive;
 	text-shadow: 2px 2px 2px #AAA;
 	text-align: center;
 }
 
-ul.topnav{
-	list-style-type: none; /*No bullet points*/
+nav ul{
+	list-style-type: none;
 	margin: 0;
 	padding: 5px;
-	overflow: hidden; /*No scroll bars*/
-	background-color: rgba(50,50,50,0.8); /*A dark grey*/
-	/*Border radii*/
+	overflow: hidden;
+	background-color: rgba(50,50,50,0.8);
 	border-radius: 10px 10px 10px 10px;
 	box-shadow: 0 10px 14px 0 rgba(0, 0, 0, 0.3), 0 12px 26px 0 rgba(0, 0, 0, 0.25);
 }
 
-ul.topnav li{
-	float: left; /*The list elements will sit next to each other left to right*/
+nav ul li{
+	float: left;
 }
 
-/*Shows user what page they are on (very subtle)*/
-.active{
-	transition: 0.3s;
-	text-shadow: 0px 0px 4px #FFF;
-	color: rgb(255,255,255);
-}
-
-ul.topnav li a{
+nav ul li a{
 	font-size: 17px;
 	font-family: 'Open Sans', sans-serif;
 
-	display: inline-block; /*Links are side by side*/
-	color: rgb(200,200,200); /*A whitish color*/
+	display: inline-block;
+	color: rgb(200,200,200);
 	text-align: center;
-	padding: 14px 16px; /*Top and bottom paddings are 14px.  Right and left paddings are 16px*/
+	padding: 14px 16px;
 	text-decoration: none;
 	margin: 2px;
-	transition: 0.4s; /*The transition when returning to the normal state*/
-	/*Make the links pills*/
+	transition: 0.4s;
+
 	border-radius: 10px;
 	border: double;
 	border-width: 7px;
 	border-color: rgba(100,100,100,0);
 }
 
-ul.topnav li a:hover{
-	/*When the user hovers over a link*/
-	background-color: rgba(130,130,130,0.5); /*Change the color of the link to be lighter*/
+nav ul li a:hover{
+	background-color: rgba(130,130,130,0.5);
 	box-shadow: 0 10px 14px 0 rgba(0, 0, 0, 0.3), 0 12px 26px 0 rgba(0, 0, 0, 0.25);
 	border-color: rgb(150,150,150);
-}
-
-ul.topnav li.menu{
-	/*This is the icon class in the list element*/
-	display: none; /*Hide the hamburger menu when the screen is large enough*/
-}
-
-/*Media queries*/
-@media screen and (max-width: 500px){
-	/*Hide all list items except home when the screen is less than 680px*/
-	ul.topnav li:not(:first-child){
-		display: none;
-	}
-	ul.topnav li.menu{
-		float: left; /*The menu will be on the very right of the topnav*/
-		display: inline-block;
-	}
-}
-
-/*For when the user clicks on the hamburger menu, add the responsive class*/
-@media screen and (max-width: 500px){
-	ul.topnav.responsive{
-		position: relative; /*Positioned relative to its normal position*/
-	}
-	ul.topnav.responsive li.menu{
-		right: 0;
-		top: 0;
-	}
-	ul.topnav.responsive li{
-		float: none; /*Displayed where it occurs in the text (top to bottom)*/
-		display: inline;
-	}
-	ul.topnav.responsive li a {
-		display: block; /*Like a <p>*/
-		text-align: left;
-	}
 }
