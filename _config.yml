@@ -1,0 +1,4 @@
+name: Gerry Minor
+markdown: kramdown
+plugins:
+  - jekyll-sitemap
