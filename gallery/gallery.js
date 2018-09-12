@@ -1,4 +1,5 @@
 function openViewer(img, title){
+	console.log(img);
 	document.getElementById("viewedImage").src = img; // Set the image
 	document.getElementById("picViewer").style.height = "100%"; // Open the overlay
 	document.getElementById('viewerImageTitle').innerHTML = title;	
