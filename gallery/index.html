@@ -4,6 +4,17 @@ title: Gerry Minor's Fine Art | Gallery
 css: gallery/gallery.css
 js: gallery/gallery.js
 ---
+<div id="picViewer" class="overlay">
+	<a title="Close" id="closeButton" onclick="closeViewer()" href="javascript:void(0)">&times;</a>
+	<br>
+	<div class="overlay-content">
+		<div class="title">
+			<p id="viewerImageTitle">Sample</p>
+		</div>
+		<img id="viewedImage" src="">
+	</div>
+</div>
+
 <div class="grid-container">
 	{% for image_panel in site.image_panels %}
 		<div class="panel">
