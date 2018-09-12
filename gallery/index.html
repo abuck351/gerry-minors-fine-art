@@ -15,6 +15,9 @@ js: gallery/gallery.js
 	</div>
 </div>
 
+<div id="top"></div>
+<input type="text" id="searchBox" onkeyup="searchImages()" placeholder="Search...">
+
 <div class="grid-container">
 	{% for image_panel in site.image_panels %}
 		<div class="panel">
@@ -31,3 +34,5 @@ js: gallery/gallery.js
 		</div>
 	{% endfor %}
 </div>
+
+<a id="backToTop" href="#top">Back to top</a>
