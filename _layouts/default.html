@@ -7,7 +7,7 @@
 		<link rel="icon" type="image/png" href="{{ site.baseurl }}/favicon.png">
 
 		{% if page.css %}
-		<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/{{ page.css }}">
+			<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/{{ page.css }}">
 		{% endif %}
 	</head>
 	<body>
@@ -29,5 +29,7 @@
 
 		</footer>
 	</body>
-	
+	{% if page.js %}
+		<script type="text/javascript" src="{{ site.baseurl }}/{{ page.js }}"></script>
+	{% endif %}
 </html>
