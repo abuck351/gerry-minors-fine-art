@@ -19,7 +19,8 @@ js: gallery/gallery.js
 <input type="text" id="searchBox" onkeyup="searchImages()" placeholder="Search...">
 
 <div class="grid-container">
-	{% for image_panel in site.image_panels | sort: 'medium' %}
+	{% assign sorted_panels = site.image_panels | sort: 'medium' %}
+	{% for image_panel in sorted_panels %}
 		<div class="panel">
 			<div class="title">
 				<p>{{ image_panel.title }}</p>
