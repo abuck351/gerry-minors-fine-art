@@ -9,12 +9,21 @@ body{
     background-attachment: fixed;
 }
 
+#lostTitle{
+	font-size: 46px;
+	color: #FFF;
+	font-family: 'Petit Formal Script', cursive;
+	text-shadow: 2px 2px 2px #AAA;
+	margin: 60px auto;
+	width: 70%;
+}
+
 #lostLink{
-	font-size: 28px;
+	font-size: 26px;
 	font-family: 'Open Sans', sans-serif;
-	text-decoration: none;
-	color: white;
-	text-align: center;
+	color: #DDD;
+	margin: 60px auto;
+	width: 70%;
 }
 
 h1.webname{
