@@ -9,6 +9,14 @@ body{
     background-attachment: fixed;
 }
 
+#lostLink{
+	font-size: 28px;
+	font-family: 'Open Sans', sans-serif;
+	text-decoration: none;
+	color: white;
+	text-align: center;
+}
+
 h1.webname{
 	font-size: 40px;
 	color: #FFF;
