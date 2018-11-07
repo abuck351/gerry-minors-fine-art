@@ -84,6 +84,29 @@
 	outline: none;
 }
 
+.viewButton{
+	font-size: 17px;
+	font-family: 'Open Sans', sans-serif;
+	color: rgb(200,200,200);
+	text-align: center;
+	text-decoration: none;
+
+	padding: 14px 16px;
+	margin: 2px;
+	transition: 0.4s;
+
+	border-radius: 10px;
+	border: double;
+	border-width: 7px;
+	border-color: rgba(100,100,100,0);
+}
+
+.viewButton:hover{
+	background-color: rgba(130,130,130,0.5);
+	box-shadow: 0 10px 14px 0 rgba(0, 0, 0, 0.3), 0 12px 26px 0 rgba(0, 0, 0, 0.25);
+	border-color: rgb(150,150,150);
+}
+
 /*Picture Viewer*/
 .overlay{
 	/*Height and width change how the overlay is revealed*/

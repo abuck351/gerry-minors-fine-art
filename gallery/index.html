@@ -29,10 +29,9 @@ js: gallery/gallery.js
 				<img src="thumbnails/{{ image_panel.thumbnail }}" alt="{{ image_panel.alt }}" width="230" height="230">
 			</a>
 			<div class="description">
-				<nav><ul>
-					<li><a onclick="openViewer('pictures/{{ image_panel.picture }}', '{{ image_panel.viewer_title }}')">Home</a></li>
-				</ul></nav>
-				<p>{{ image_panel.medium }} | {{ image_panel.width }} &times; {{ image_panel.height }}</p>
+				<a class="viewButton" onclick="openViewer('pictures/{{ image_panel.picture }}', '{{ image_panel.viewer_title }}')">View</a>
+				<p>{{ image_panel.medium }}</p>
+				<p>{{ image_panel.width }} &times; {{ image_panel.height }}</p>
 			</div>
 		</div>
 	{% endfor %}
