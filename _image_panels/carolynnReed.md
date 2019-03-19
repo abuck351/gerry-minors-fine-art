@@ -1,5 +1,5 @@
 ---
-title: Carolynn Reed
+title: Carolynn Reed (Minor)
 picture: carolynnReed.jpg
 viewer_title: Carolynn Reed
 thumbnail: carolynnReed_t.jpg

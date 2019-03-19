@@ -1,5 +1,5 @@
 ---
-title: Denise Newberry
+title: Denise Newberry (Minor)
 picture: deniseNewberry.jpg
 viewer_title: Denise Newberry
 thumbnail: deniseNewberry_t.jpg
