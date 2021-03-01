@@ -1,5 +1,5 @@
 var slideSpeed = 6;
-var numSlides = 7;
+var numSlides = 8;
 
 var auto; // These are the set timeout functions for the slideshow
 var next;
@@ -41,10 +41,10 @@ function nextSlide(){
 function changeSlide(direction){
 	slideIndex += direction;
 	if(slideIndex >= slides.length){
-		slideIndex = 0; // Go from slide 7 --> 0
+		slideIndex = 0; // Go from slide 8 --> 0
 	}
 	if(slideIndex < 0){
-		slideIndex = slides.length - 1; // Go from slide 0 --> 7
+		slideIndex = slides.length - 1; // Go from slide 0 --> 8
 	}
 	slide.src = slides[slideIndex]; // Display the current image
 }
