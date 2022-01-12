@@ -1,5 +1,5 @@
 ---
-title: Autumn Season’s Beauty
+title: Autumn Season’s...
 picture: autumnSeasonsBeauty.jpg
 viewer_title: Autumn Season’s Beauty
 thumbnail: autumnSeasonsBeauty_t.jpg

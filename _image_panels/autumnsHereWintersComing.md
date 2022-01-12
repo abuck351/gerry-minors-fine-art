@@ -1,8 +1,8 @@
 ---
-title: Autumn’s Here, Winter’s Coming 
-picture: autumnsHearWintersComing.jpg
+title: Autumn’s Here... 
+picture: autumnsHereWintersComing.jpg
 viewer_title: Autumn’s Here, Winter’s Coming 
-thumbnail: autumnsHearWintersComing_t.jpg
+thumbnail: autumnsHereWintersComing_t.jpg
 alt: Autumn’s Here, Winter’s Coming 
 medium: Oil
 width: 11"
