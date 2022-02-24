@@ -1,4 +1,5 @@
 name: Gerry Minor
+url: "https://gerryminor.art"
 markdown: kramdown
 plugins:
   - jekyll-sitemap
