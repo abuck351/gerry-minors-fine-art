@@ -1,5 +1,5 @@
 var slideSpeed = 6;
-var numSlides = 8;
+var numSlides = 9;
 
 var auto; // These are the set timeout functions for the slideshow
 var next;
