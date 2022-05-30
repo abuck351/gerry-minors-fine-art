@@ -1,3 +1,14 @@
+---
+navigation:
+ - text: Home
+   url: /
+ - text: Gallery
+   url: /gallery/
+ - text: About
+   url: /about/
+ - text: Contact
+   url: /contact/
+---
 <!DOCTYPE html>
 <html>
 	<head>
@@ -17,10 +28,13 @@
 				<a href="{{ site.baseurl }}/" style="text-decoration: none;">
 					<h1 class="webname">Gerry Minor's Fine Art</h1>
 				</a>
-				<li><a href="{{ site.baseurl }}/">Home</a></li>
-				<li><a href="{{ site.baseurl }}/gallery/">Gallery</a></li>
-				<li><a href="{{ site.baseurl }}/about/">About</a></li>
-				<li><a href="{{ site.baseurl }}/contact/">Contact</a></li>
+
+				{% assign url = page.url %}
+				{% for link in layout.navigation %}
+					<li><a href="{{ site.baseurl }}{{ link.url }}" {% if url == link.url %}class="active"{% endif %}>
+						{{ link.text }}
+					</a></li>
+				{% endfor %}
 			</ul>
 		</nav>
 		<div class="container">
